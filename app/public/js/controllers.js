@@ -15,7 +15,7 @@ angular.module('cinqApp')
             function(response) {
                 console.log(response.data);
                $scope.people = response.data;
-               $scope.showMenu = true;
+               $scope.showDetails = true;
             },
             function(response) {
                 $scope.message = 'Error: '+response.status + ' ' + response.statusText;

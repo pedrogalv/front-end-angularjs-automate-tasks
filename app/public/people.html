@@ -11,10 +11,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head 
          content must come *after* these tags -->
     
-    
-        <!-- Bootstrap -->
-<!-- build:css styles/main.css -->
-
 
     
 <!-- endbuild -->
@@ -32,14 +28,13 @@
     
 <div class="container" ng-controller="PeopleController">
 
-    <div ng-if="!showLeaders">
+    <div ng-if="!showDetails">
         <h3>{{message}}</h3>
     </div>
-    <ul class="media-list" ng-if="showLeaders">
-        <li class="media" ng-repeat="person in people">
-            <div class="media-body">
-                <h3 class="media-heading">{{person.id}}
-                    <small>{{person.name}}</small></h3>
+    <ul ng-if="showDetails">
+        <li ng-repeat="person in people">
+            <div >
+                <h3 >({{person.id}}) {{person.name}}</h3>
                     <p>{{person.disclosableInfo}}</p>
             </div>
         </li>
