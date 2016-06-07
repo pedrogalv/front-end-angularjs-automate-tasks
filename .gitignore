@@ -2,3 +2,6 @@
 /.settings/
 /.classpath
 /.project
+/node_modules
+/app/public/bower_components
+/dist

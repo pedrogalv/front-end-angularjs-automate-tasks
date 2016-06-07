@@ -1,47 +1,63 @@
-# front-end-angularjs-automate-tasks
+# Angular JS + Node Server
 
-Enclosed in this project, lies a small Java application that expose a 
-REST service that returns a list of People.
+##How to run:
 
-This service can be reached using the following URL:
+- Install Node
 
-    http://localhost:8090/rest/people
+- Install Bower globally
+```
+npm install bower -g 
+```
 
-It will return a JSON object. To run the service, you will need to build the application.
-For that, you will need to install Java JDK and Maven.
-
-After you sucessfully installed everything, just open a command and run:
-
-
-    mvn clean package
-    
-To run, either call Java or run Maven
-
-    java -jar target/people-rest.war
-    
-or
-
-    mvn spring-boot:run
-    
-## Proposed Exercise
-
-Create an app to present the resulting data from the REST service. The way you present is up to you, as long you follow the premises.
-
-Premises:
-* DO NOT USE *\<table\>*
-* The application must be implemented using _AngularJS_. 
-* The application must be _Responsive_.
-* The application must be presented in only three resolutions: _Full HD_, _HD_ and _Wide VGA_. 
-* Do _not_ use any _layout frameworks_ like Bootstrap, Foundation, etc. Implement your own solution. Feel free to use other frameworks for UX 
-* You are free to change the application included in every aspect.
-
-## Challenges
-
-1. Minify using the Automation Tool of your choice, except MAVEN plugins.
-2. Replace the Java Application by one written using Node.js _or_ ...
-3. ...automate test using an end-to-end test framework for AngularJS. 
+- Install Gulp globally
+```
+npm install gulp -g 
+```
 
 
-## Measuring results
-Send the exact instructions on how to install dependencies, compile and run
-the application, in a way even a newbie would understand. 
+##Installation steps:
+```
+npm install 
+```
+(bower install is runned automatically after this)
+
+To run the server, execute
+```
+npm start 
+```
+
+You can check the server response accessing
+```
+http://localhost:8090/rest/people
+```
+
+You will get a result similar to this:
+```
+[
+  {
+    "id": 0,
+    "name": "Rose Franklin",
+    "disclosableInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini m veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 1,
+    "name": "Rose undefined",
+    "disclosableInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini m veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  
+  ...
+]
+```
+
+Execute the following command to minify the files:
+```
+gulp build
+```
+
+And access the file generated:
+```
+/dist/public/people.html
+```
+
+P.S:Due to lack of time, I did not created a friendly css to the screen
+
